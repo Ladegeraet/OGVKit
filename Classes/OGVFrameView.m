@@ -194,6 +194,12 @@ static const GLfloat conversionMatrixSRGB[] = {
     });
 }
 
+// https://github.com/brion/OGVKit/issues/189
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    [self updateRectangleWidth:self.frame.size.width height:self.frame.size.height];
+}
+
 #pragma mark Private methods
 
 -(void)setupGLStuff
