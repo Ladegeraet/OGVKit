@@ -576,8 +576,7 @@
             break;
 
         case OGVInputStreamStateReading:
-            // Break the stream off from us and send it to the decoder.
-            stream.delegate = nil;
+            // start decoding
             [self startDecoder];
             break;
 
